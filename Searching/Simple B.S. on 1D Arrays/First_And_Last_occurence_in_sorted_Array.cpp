@@ -33,8 +33,8 @@ public:
    }
 
 
-
-
+// VARIATION --> COUNT No. of occurences of a number in a sorted array containing duplicate elements
+return ans= last-first+1;
 
     vector<int> searchRange(vector<int>& nums, int target) {
         return {first(nums,target),last(nums,target)};
