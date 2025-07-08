@@ -46,3 +46,14 @@ int main() {
 
     return 0;
 }
+
+
+
+// For making descending order --> reverse the comparing operatiors in while loop
+        while(arr[left]>=pivot && left<high){
+            left++;
+        }
+        //1st element smaller than pivot from right
+         while(arr[right]<pivot && right>low){
+            right--;
+        }
