@@ -1,3 +1,6 @@
+//T.C. =O(NlogN)
+//S.C.= O(1) --> no extra space only auxillary stack space ~ O(1)
+
 #include <bits/stdc++.h>
 using namespace std;
 int partition(vector<int> &arr,int low,int high){
