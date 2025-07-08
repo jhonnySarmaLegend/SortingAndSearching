@@ -1,3 +1,7 @@
+//T.C. =O(NlogN)
+//S.C.= O(N) --> temp array + auxillary stack space ~ O(N)
+
+
 // Online C++ compiler to run C++ program online
 #include <bits/stdc++.h>
 using namespace std;
