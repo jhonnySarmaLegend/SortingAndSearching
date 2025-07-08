@@ -19,7 +19,7 @@ int partition(vector<int> &arr,int low,int high){
     }
     
     //pivot with the smallest element right at after outer loop  ends 
-    swap(arr[low],arr[right]); //arr[low]==pivot which is 1st element , currently arr[right] is the smaller than pivot as loop breaks with fail condition
+    swap(pivot,arr[right]); //arr[low]==pivot which is 1st element , currently arr[right] is the smaller than pivot as loop breaks with fail condition
     return right;
 }
 
