@@ -1,5 +1,16 @@
 //https://leetcode.com/problems/single-element-in-a-sorted-array/description/
 
+
+//BRUTE FORCE O(N)
+ int singleNonDuplicate(vector<int>& nums) {
+        int xr=0;
+        for(auto it:nums)xr^=it;
+        return xr;
+    }
+
+
+
+//OPTIMAL
     int singleNonDuplicate(vector<int>& nums) {
         // 1^1 =0 , 1^0=1
         // pairs will be in  {even,odd} indexes 
