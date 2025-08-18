@@ -21,12 +21,12 @@ public:
         }
 
         //we are in the left:
-        if ((mid % 2 == 1 && arr[mid] == arr[mid - 1]) || (mid % 2 == 0 && arr[mid] == arr[mid + 1])) {
+        if ((mid % 2 == 1 && arr[mid] == arr[mid - 1]) || (mid % 2 == 0 && arr[mid] == arr[mid + 1])) { // {EVEN,ODD} PAIR
             //eliminate the left half:
             low = mid + 1;
         }
         //we are in the right:
-        else {
+        else {  // {ODD,EVEN} PAIR
             //eliminate the right half:
             high = mid - 1;
         }
