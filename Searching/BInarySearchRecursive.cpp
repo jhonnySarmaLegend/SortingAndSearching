@@ -2,7 +2,7 @@
 using namespace std;
 
 void binRec(int arr[], int low, int high,int k){
-    int mid=(low+high)/2; // or l-(h-l)/2
+    int mid=(low+high)/2; // or l+ (h-l)/2
     
     if(arr[mid]>k)binRec(arr,low,mid-1,k);
     else if(arr[mid]<k)(arr,mid+1,high,k);
