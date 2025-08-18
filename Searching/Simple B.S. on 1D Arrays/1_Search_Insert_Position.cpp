@@ -16,7 +16,7 @@ public:
             else if(nums[mid]<target){
                 l=mid+1;
             }
-            else{//nums[mid]>target
+            else{//nums[mid]>target  or smaleest number greater than target
                 ans=mid;
                 h=mid-1;
             }
