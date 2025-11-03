@@ -1,27 +1,18 @@
 //https://leetcode.com/problems/search-insert-position/description/
-
-class Solution {
-public:
-    int searchInsert(vector<int>& nums, int target) {
-    //edge case         
-       if(nums[0]>target)return 0;
-       if(nums[nums.size()-1]<target)return nums.size();
-    //general flow  
+int searchInsert(vector<int>& nums, int target) {
+        // Array is sorted
+        if(target<nums[0])return 0; // EDGE case 1
+        if(target>nums[nums.size()-1])return nums.size(); // EDGE case 2
+        
         int ans=-1;
-        int l=0,h=nums.size()-1;
-        while(l<=h){
-            int mid=l+((h-l)/2);
+        int low=0,high=nums.size()-1;
+        while(low<=high){
+            int mid=(high-low)/2 + low;
 
             if(nums[mid]==target)return mid;
-            else if(nums[mid]<target){
-                l=mid+1;
-            }
-            else{//nums[mid]>target  or smaleest number greater than target
-                ans=mid;
-                h=mid-1;
-            }
+            else if(nums[mid]>target){ans=mid;high=mid-1;}//nums[mid]>target  or smaleest number greater than target
+            else low=mid+1;
         }
-
         return ans;
     }
-};
+
