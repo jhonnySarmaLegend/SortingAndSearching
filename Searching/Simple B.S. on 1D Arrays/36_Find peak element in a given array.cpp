@@ -37,8 +37,8 @@ int peakElement(vector<int>&arr){
       while(low<=high){
       int mid=(low+high)/2;
       if(arr[mid-1]<arr[mid]&&arr[mid]>arr[mid+1])return mid;
-      else if(arr[mid]>arr[mid-1])low=mid+1;//left part
-      else high=mid-1;//right pat
+      else if(arr[mid]>arr[mid-1])low=mid+1;//left part sorted
+      else high=mid-1;//right part sorted
       }
       return -1;
 }
