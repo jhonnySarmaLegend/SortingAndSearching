@@ -22,7 +22,7 @@ public:
 
         //we are in the left:
         if ((mid % 2 == 1 && arr[mid] == arr[mid - 1]) || (mid % 2 == 0 && arr[mid] == arr[mid + 1])) { // {EVEN,ODD} PAIR
-            //eliminate the left half:
+            //eliminate the left half: since sorted (even , odd pairs same)
             low = mid + 1;
         }
         //we are in the right:
